@@ -1,0 +1,35 @@
+<h1><%= @comment.title %></h1>
+
+<div class='comment-block'>
+  <%= @comment.body %>
+</div>
+
+<h4>You can rate this comment by clicking on the stars:</h4>
+
+<div class='rating-block'>
+  <p>Averate rating (from <%= pluralize(@comment.ratings.count, 'rating') %>):</p>
+  <div id="star"></div>
+
+  <p>Your rating:</p>
+  <div id="user_star"></div>
+</div>
+
+<script>
+  $('#star').raty({
+    readOnly: true,
+    score: <%= @comment.average_rating %>,
+    path: '/assets'
+  });
+
+  $('#user_star').raty({
+    score: <%= @rating.score %>,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %> + '?user=<%= @current_user.name %>',
+        type: 'PATCH',
+        data: { score: score, comment_id: '<%= @comment.id %>' }
+      });
+    }
+  });
+</script>

@@ -1,0 +1,5 @@
+User.create(name: 'bob')
+User.create(name: 'peter')
+User.create(name: 'susan')
+Comment.create(title: 'This is a comment', body: 'Bacon ipsum dolor amet rump et pastrami lorem landjaeger sirloin sunt tongue. Et salami enim hamburger laborum do alcatra ad voluptate pancetta tenderloin turkey. Aliqua voluptate magna ad officia pastrami pork loin commodo. Ball tip shoulder strip steak ad, porchetta tenderloin swine spare ribs cow. Pork loin aliquip consequat magna prosciutto. Corned beef capicola jowl proident ipsum aute pastrami.')
+Comment.create(title: 'Yet another comment', body: 'T-bone ut occaecat flank andouille spare ribs do short ribs fugiat filet mignon ball tip swine. Boudin jerky cow pork belly ex. Deserunt in anim landjaeger pork chop elit aute voluptate pig pork belly laboris turkey swine. T-bone reprehenderit beef nulla cupidatat ad filet mignon officia. Hamburger ullamco irure shankle qui flank incididunt, elit pastrami do cupidatat doner. Porchetta culpa elit, sausage ex kielbasa magna. Filet mignon tri-tip qui, short loin aliqua ball tip sirloin ut pastrami consectetur swine tenderloin.')

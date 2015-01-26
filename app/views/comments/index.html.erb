@@ -1,0 +1,8 @@
+<h1>This is the list of comments</h1>
+
+
+<% @comments.each do |comment| %>
+  <div class='comment-block'>
+    <%= link_to comment.title, comment_path(comment) %>
+  </div>
+<% end %>
